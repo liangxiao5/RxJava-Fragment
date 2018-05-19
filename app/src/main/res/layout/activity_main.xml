@@ -6,20 +6,18 @@
     android:orientation="vertical"
     tools:context="com.example.liangxiao.myapplication.MainActivity">
 
- <fragment
+ <FrameLayout
      android:id="@+id/editText_fragment"
-     android:name="com.example.liangxiao.myapplication.EditFragment"
      android:layout_width="match_parent"
      android:layout_height="0dp"
      android:layout_weight="1"
      >
- </fragment>
-    <fragment
+ </FrameLayout>
+    <FrameLayout
         android:id="@+id/textView_fragment"
-        android:name="com.example.liangxiao.myapplication.TextViewFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         >
-    </fragment>
+    </FrameLayout>
 </LinearLayout>

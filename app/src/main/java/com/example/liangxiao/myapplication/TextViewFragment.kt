@@ -11,6 +11,9 @@ import kotlinx.android.synthetic.main.textview_fragment.*
  * Created by liangxiao on 2018/5/19.
  */
 class TextViewFragment: Fragment() {
+    companion object {
+        const val TAG = "TextViewFragment"
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.textview_fragment,container,false)
@@ -18,7 +21,7 @@ class TextViewFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val editFragment:EditFragment = fragmentManager.findFragmentById(R.id.editText_fragment) as EditFragment
+        val editFragment:EditFragment = fragmentManager.findFragmentByTag(EditFragment.TAG) as EditFragment
         editFragment.observable?.subscribe({
             text.text = it
         })
